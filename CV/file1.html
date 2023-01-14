@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créateur de cv</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="file1.css">
+    <script>
+        function passvalues ()
+        {
+    var name = document.getElementById('name').value;
+    var prof = document.getElementById('prof').value;
+    var adress = document.getElementById('adress').value;
+    var email = document.getElementById('email').value;
+    var number = document.getElementById('number').value;
+    var about = document.getElementById('about').value;
+    var Compétences = document.getElementById('Compétences').value;
+    var Langue1 = document.getElementById('Langue1').value;
+    var Langues= document.getElementById('Langues').value;
+    var Lsr = document.getElementById('Lsr').value;
+    var Debut = document.getElementById('Debut').value;
+    var Fin = document.getElementById('Fin').value;
+    var Etablissement = document.getElementById('Etablissement').value;
+    var Description = document.getElementById('Description').value;
+    var Start= document.getElementById('Start').value;
+    var End = document.getElementById('End').value;
+    var company = document.getElementById('company').value;
+    var Desc = document.getElementById('Desc').value;
+    localStorage.setItem("name",name);
+    localStorage.setItem("prof",prof);
+    localStorage.setItem("adress",adress);
+    localStorage.setItem("email",email);
+    localStorage.setItem("number",number);
+    localStorage.setItem("about",about);
+    localStorage.setItem("Compétences",Compétences);
+    localStorage.setItem("Langue1",Langue1);
+    localStorage.setItem("Langues",Langues);
+    localStorage.setItem("Lsr",Lsr);
+    localStorage.setItem("Debut",Debut);
+    localStorage.setItem("Fin",Fin);
+    localStorage.setItem("Etablissement",Etablissement);
+    localStorage.setItem("Description",Description);
+    localStorage.setItem("Start",Start);
+    localStorage.setItem("End",End);
+    localStorage.setItem("company",company);
+    localStorage.setItem("Desc",Desc);
+   
+    return false;
+         }
+    </script>
+</head>
+<body>
+    <div class="container text-light">
+    <h1 class="text-center my-5 fw-bold"> Cv generator</h1>
+    <div class="form-container">
+    <form action="resultat.html"  >
+            <div class="border border-dark p-3 mb-3">    
+                <h2>Profile picture</h2>
+                <div class="mb-3">
+                    <input class="form-control" name="image" type="file" required>
+                </div>
+            </div>
+            <div class="border border-dark p-3 mb-3">    
+                <h2>Contact</h2>
+                <div class="mb-3">
+                    <div>
+                        <label class="form-label">first and last name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+    
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Profession</label>
+                    <input type="text" class="form-control" id="prof" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Adress</label>
+                    <input type="text" class="form-control" id="adress" required>
+                    
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">E-mail adress</label>
+                    <input type="email" class="form-control" id="email" required>
+                    <div class="form-text text-light">'We'll never share your email with anyone else'</div>
+                  
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">phone number</label>
+                    <input type="tel" class="form-control" id="number" required >
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">About you!</label>
+                    <input type="text" class="form-control" id="about" required >
+                    
+                </div>
+                    
+                    <h2>Skills</h2>
+                    <div class="mb-3">
+                        <label class="form-label">skill</label>
+                        <input type="text" class="form-control" id="Compétences" placeholder="your skill"required>
+                    </div>
+                  
+                    <h2>Languages</h2>
+                    <div class="mb-3">
+                        <label  class="form-label">Language</label>
+                        <input type="text" id="Langue1" class="form-control" required>
+                        <select class="form-select mt-2" id="Langues" required>
+                            <option value="">Choose your level </option>
+                            <option value="Beginner">1 - Beginner</option>
+                            <option value="Elementary">2 - Elementary</option>
+                            <option value="Intermediate">3 - Intermediate</option>
+                            <option value="Advanced">4 - Advanced</option>
+                            <option value="Mastery">5 - Mastery</option>
+                        </select>
+                    </div>
+                    <h2>Hobbies</h2>
+                    <div class="mb-3">
+                        <label  class="form-label">Hobbie</label>
+                        <input type="text" id="Lsr" class="form-control" required>
+                    </div>
+
+                    <div class="border border-dark p-3 mb-3">    
+                    <h2>Formation</h2>
+                <div class="mb-3 d-flex justify-content-between">
+                    <div>
+                        <label  class="form-label">Start</label>
+                        <input type="text" id="Debut" class="form-control">
+                    </div>
+                    <div>
+                        <label  class="form-label">End</label>
+                        <input type="text" id="Fin" class="form-control">
+                    </div>
+                </div>
+    
+                <div class="mb-3">
+                    <label  class="form-label">School</label>
+                    <input type="text" id="Etablissement" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label  class="form-label">Description</label>
+                    <input type="text" id="Description" class="form-control">
+                </div>
+                <h2>Experiences</h2>
+                <div class="mb-3 d-flex justify-content-between">
+                    <div>
+                    <label for="exampleInputEmail1" class="form-label">Start</label>
+                    <input type="text" id="Start" class="form-control">
+                </div>
+                <div>
+                    <label  class="form-label">End</label>
+                    <input type="text" id="End" class="form-control">
+                </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label  class="form-label">Company</label>
+                    <input type="text" id="company" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label  class="form-label">Description</label>
+                    <input type="text" id="Desc" class="form-control">
+                </div>
+            </div>
+                 <script src="app.js"></script>
+           <center>
+               <input type="submit"  value="submit"  onclick="passvalues()"/>
+           </center>
+        </form>
+</body>
+</html>
